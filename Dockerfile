@@ -9,7 +9,7 @@ LABEL version="1.1.0" \
       com.github.actions.icon="check" \
       com.github.actions.color="green"
 
-
+COPY cacerts /usr/lib/jvm/java-openjdk/jre/lib/security
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 COPY cleanup.sh /cleanup.sh
